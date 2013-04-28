@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Coder.Db" Class="CompileLtoSDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(local);Initial Catalog=Coder.Db;User ID=sa;MultipleActiveResultSets=True" SettingsObjectName="Coder.CompilerOfOJ.Properties.Settings" SettingsPropertyName="Coder_DbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CompileCacheModels" Member="CompileCacheModels">
+    <Type Name="CompileCacheModels">
+      <Column Name="cacheCodeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="codeType" Type="System.String" DbType="NVarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="cacheCodeFileName" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="memoryLimit" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="timeLimit" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="uid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="problemId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="contentId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="resultId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="isTeamContest" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="isSingleContest" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="submitTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="codePriority" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResultModels" Member="ResultModels">
+    <Type Name="ResultModels">
+      <Column Name="resut_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="result_status" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="result_memory" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="result_time" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="result_language" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="result_submitTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="result_codeLength" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="resultCodeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="baseProblemId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BaseProblemModels" Member="BaseProblemModels">
+    <Type Name="BaseProblemModels">
+      <Column Name="pid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="content" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="input" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="output" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="sampleInput" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="sampleOutput" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="memory_limit" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="time_limit" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="accepteds" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="submiteds" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sourceId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="modelProblemId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SingleResultModels" Member="SingleResultModels">
+    <Type Name="SingleResultModels">
+      <Column Name="singleResutId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="singleResultStatus" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="singleResultMemory" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="singleResultTime" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="singleResultLanguage" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="singleResultSubmitTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="singleResultCodeLength" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="singleContestId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="baseProblemId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TeamResultModels" Member="TeamResultModels">
+    <Type Name="TeamResultModels">
+      <Column Name="teamResutId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="teamResultStatus" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="teamResultMemory" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="teamResultTime" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="teamResultLanguage" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="teamResultSubmitTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="teamResultCodeLength" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="teamContestId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="baseProblemId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="teamId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

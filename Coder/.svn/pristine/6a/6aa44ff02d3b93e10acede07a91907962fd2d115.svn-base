@@ -1,0 +1,74 @@
+﻿using Coder.Core.Models.Commons;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Coder.Core.Models.OnlineJudges
+{
+    public class TeamContestModel
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        [Key]
+        public int teamContestId { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        [Required]
+        [Column(TypeName = "nvarchar")]
+        [StringLength(200)]
+        public string teamContestName { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        [Required]
+        [Column(TypeName = "datetime")]
+        public DateTime teamContestBegintime { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        [Required]
+        [Column(TypeName = "datetime")]
+        public DateTime teamContestTime { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        [Required]
+        public int teamContestPersonnum { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        [Required]
+        [Column(TypeName = "nvarchar")]
+        public int teamContestDescription { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        [Required]
+        [Column(TypeName = "nvarchar")]
+        [StringLength(10)]
+        public string teamContestLevel { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public virtual UserModel teamContestLeader { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public virtual ContestPermissionModel contestPermission { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public virtual RuleModel rule { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public virtual ICollection<TeamResultModel> teamResults { get; set; } 
+    }
+}

@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Coder.Core.Models.Solutions
+{
+    public class SolutionProblemModel
+    {
+        [Key]
+        public int solutionProbelmId { get; set; }
+        [Required]
+        public DateTime solutionProblemTime { get; set; }
+        [Required]
+        [Column(TypeName = "text")]
+        public string solutionProblemDescription { get; set; }
+
+        public virtual TypeModel type { get; set; }
+        public virtual ICollection<SolutionModel> solutions { get; set; }
+    }
+}

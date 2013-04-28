@@ -1,0 +1,579 @@
+/*
+标签属性按照字母升序排列
+*/
+
+
+
+/*******************      Reset Start      ******************/
+div,input,body,textarea
+{
+	border:none 0px;
+	margin:0px;
+	padding:0px;
+}
+
+
+/*******************      Reset End      ******************/
+
+/*******************      公共部分 Start      ******************/
+#all
+{
+	margin:0 auto 0 auto;
+	width:962px;
+}
+
+/*******************      banner Start      ******************/
+#banner
+{
+	border-left:1px solid #000;
+	border-right:1px solid #000;
+	height:119px;
+	width:960px;
+}
+
+#banner_logo
+{
+	background-image:url(../img/banner_logo.gif);
+	float:left;
+	height:68px;
+	margin:28px 0 0 33px;
+	overflow:hidden;
+	width:158px;
+}
+
+#banner_btn01
+{
+	color:#999999;
+	float:right;
+	font-family:微软雅黑;
+	font-size:12px;
+	height:14px;
+	line-height:14px;
+	padding:20px 24px 40px 200px;
+}
+
+#banner_btn01 div
+{
+	float:right;
+	padding:0 7px 0 7px;
+}
+
+#banner_btn01_register
+{
+	border-left:1px solid #999999;
+}
+
+#banner_btn02
+{
+	float:right;
+	width:660px;
+}
+
+#banner_btn02 div
+{
+	float:right;
+}
+
+#banner_btn02_oj
+{
+	background-color:#ccccff;
+	border:1px solid #3333ff;
+	border-bottom:none 0px;
+	color:#3333ff;
+	height:44px;
+	line-height:44px;
+	margin-left:6px;
+	text-align:center;
+	width:166px;
+}
+
+#banner_btn02_code
+{
+	border:1px solid #cecece;
+	border-bottom:none 0px;
+	color:#cccccc;
+	height:44px;
+	line-height:44px;
+	margin:0 2px 0 6px;
+	text-align:center;
+	width:166px;
+}
+
+#banner_btn02_search input
+{
+	border:1px solid #000;
+	font-size:12px;
+	height:27px;
+	line-height:27px;
+	margin-top:10px;
+	width:287px;
+}
+/*******************      banner End      ******************/
+
+/*******************      nav Start      ******************/
+#nav
+{
+	background-color:#3333ff;
+	height:38px;
+	overflow:hidden;
+	width:962px;
+}
+
+#nav div
+{
+	float:right;
+}
+
+#nav div a
+{
+	color:#FFF;
+	text-decoration:none;
+}
+
+.nav_fgx
+{
+	background-image:url(../img/nav_fgx.gif);
+	height:38px;
+	overflow:hidden;
+	margin-right:10px;
+	width:2px;
+}
+
+.nav
+{
+	height:28px;
+	line-height:28px;
+	overflow:hidden;
+	margin:5px 10px 0 0;
+	text-align:center;
+	width:75px;
+}
+
+.nav_selected
+{
+	background-image:url(../img/nav_bg.gif);
+	height:28px;
+	line-height:28px;
+	overflow:hidden;
+	margin:5px 10px 0 0;
+	text-align:center;
+	width:75px;
+}
+/*******************      nav End      ******************/
+
+/*******************      main Start      ******************/
+#main
+{
+	border-left:1px solid #000;
+	border-right:1px solid #000;
+	overflow:hidden;
+	padding:20px 30px 20px 30px;
+	width:900px;
+}
+/*******************      main End      ******************/
+
+/*******************      公共部分 End      ******************/
+
+
+/*******************      Rank Start      ******************/
+.rank_column
+{
+	float:left;
+	width:252px;
+}
+
+#rank_column01
+{
+	border-right:1px dashed #333333;
+	padding-right:30px;
+}
+
+#rank_column02
+{
+	border-right:1px dashed #333333;
+	padding:0 30px 0 30px;
+}
+
+#rank_column03
+{
+	padding-left:30px;
+}
+
+.rank_column_tit
+{
+	border-bottom:3px solid #6666ff;
+	color:#000;
+	font-family:微软雅黑;
+	font-size:14px;
+	height:32px;
+	line-height:32px;
+	width:100%;
+}
+
+.rank_column_list
+{
+	padding-top:10px;
+	width:100%;
+}
+
+.rank_column_list_cont
+{
+	font-size:12px;
+	height:32px;
+	line-height:32px;
+	width:100%;
+}
+
+
+.rank_column_list_cont_num01
+{
+	color:#ff6600;
+	float:left;
+	width:35px;
+}
+
+.rank_column_list_cont_num02
+{
+	color:#999999;
+	float:left;
+	width:35px;
+}
+
+.rank_column_list_cont_num
+{
+	color:#999999;
+	float:right;
+}
+
+.rank_column_list_cont_name
+{
+	color:#006600;
+	float:left;
+	width:190px;
+}
+/*******************      Rank End      ******************/
+
+/*******************      Question Start      ******************/
+#question_view
+{
+	border:1px solid #999999;
+	padding:32px 0 20px 45px;
+}
+
+#question_tit
+{
+	color:#336600;
+	font-family:黑体;
+	font-size:18px;
+	height:32px;
+	line-height:32px;
+}
+
+#question_info
+{
+	color:#666666;
+	font-family:黑体;
+	font-size:12px;
+	height:24px;
+	line-height:24px;
+}
+
+#question_cont
+{
+	border-bottom:1px solid #cccccc;
+	color:#333333;
+	font-family:黑体;
+	font-size:14px;
+	line-height:32px;
+	padding-bottom:20px;
+	width:805px;
+}
+
+#question_answer
+{
+	border:1px solid #5959ec;
+	height:211px;
+	margin-top:20px;
+	width:805px;
+}
+
+#question_language
+{
+	background-color:#e5e5ff;
+	color:#3333ff;
+	font-family:黑体;
+	font-size:12px;
+	height:34px;
+	line-height:34px;
+}
+
+#question_input_cont
+{
+	height:177px;
+	width:805px;
+}
+
+#question_btn
+{
+	height:32px;
+	margin-top:20px;
+	overflow:hidden;
+}
+
+#question_submit
+{
+	background-color:#3333ff;
+	color:#FFF;
+	float:left;
+	font-family:微软雅黑;
+	font-size:12px;
+	height:32px;
+	line-height:32px;
+	text-align:center;
+	width:87px;
+}
+
+#question_reset,#question_back
+{
+	background-color:#3333ff;
+	color:#FFF;
+	float:left;
+	font-family:微软雅黑;
+	font-size:12px;
+	height:32px;
+	line-height:32px;
+	margin-left:30px;
+	text-align:center;
+	width:87px;
+}
+/*******************      Question End      ******************/
+
+/*******************      Math_introduce Start      ******************/
+#math_btn
+{
+	background-color:#669900;
+	color:#FFF;
+	float:right;
+	font-family:微软雅黑;
+	font-size:12px;
+	height:28px;
+	line-height:28px;
+	margin-right:70px;
+	text-align:center;
+	width:78px;
+}
+
+#math_introduce
+{
+	font-family:微软雅黑;
+	font-size:14px;
+	line-height:24px;
+}
+
+.math_introduce
+{
+	color:#333333;
+}
+
+.math_introduce span
+{
+	color:#3333ff;
+}
+
+#math_introduce_question
+{
+	color:#333333;
+	font-family:微软雅黑;
+	font-size:14px;
+	padding-top:20px;
+}
+
+#math_introduce_question_command div
+{
+	color:#666666;
+	line-height:24px;
+	padding-left:35px;
+}
+/*******************       Math_introduce End      ******************/
+
+/*******************       Math_list Start      ******************/
+#math_list_view
+{
+	border:1px solid #999999;
+	padding:30px 30px;
+	width:820px;
+}
+
+#math_list_nav
+{
+	border-bottom:1px solid #cccccc;
+	border-top:2px solid #b2b2b2;
+	color:#cccccc;
+	font-family:黑体;
+	font-size:12px;
+	height:24px;
+	line-height:24px;
+}
+
+.math_list_nav02
+{
+	color:#0000cc;
+}
+
+.math_list_nav
+{
+	color:#333333;
+}
+
+#math_list_orderby
+{
+	float:right;
+}
+
+#math_list_question
+{
+	border:1px solid #6a6a9c;
+	border-bottom:none 0px;
+	overflow:hidden;
+	margin-top:20px;
+	width:818px;
+}
+
+.bg_grey
+{
+	background-color:#ebebeb;
+}
+
+.math_list_question
+{
+	border-bottom:1px solid #9999cc;
+	font-size:12px;
+	overflow:hidden;
+}
+
+.math_list_ques_view
+{
+	border-left:1px solid #9999cc;
+	float:left;
+	overflow:hidden;
+	width:755px;
+}
+
+.math_list_ques_row01
+{
+	color:#666666;
+	font-size:12px;
+	height:48px;
+	line-height:48px;
+}
+
+.math_list_ques_row01 div
+{
+	float:left;
+}
+
+.math_list_ques_row02
+{
+	border-top:1px dashed #9d9d9d;
+	color:#666666;
+	font-size:12px;
+	line-height:24px;
+	padding:20px 0 10px 20px;
+}
+
+.math_list_ques_row02 div
+{
+	width:100%;
+}
+
+.math_list_ques_state01
+{
+	color:#006600;
+	float:left;
+	line-height:48px;
+	text-align:center;
+	width:60px;
+}
+
+.math_list_ques_state02
+{
+	color:#812f2f;
+	float:left;
+	line-height:48px;
+	text-align:center;
+	width:60px;
+}
+
+.math_list_ques_state03
+{
+	color:#666666;
+	float:left;
+	line-height:48px;
+	text-align:center;
+	width:60px;
+}
+
+.math_list_ques_cont
+{
+	color:#333333;
+	padding-left:20px;
+	width:415px;
+}
+
+.math_list_ques_time
+{
+	padding:0 5px 0 5px;
+	text-align:center;
+	width:140px;
+}
+
+.math_list_ques_num
+{
+	padding:0 5px 0 0;
+	text-align:center;
+	width:40px;
+}
+
+.math_list_ques_btn
+{
+	overflow:hidden;
+	padding-left:30px;
+}
+
+.math_list_ques_btn div
+{
+	margin-top:10px;
+}
+
+.math_list_ques_join
+{
+	background-color:#ff9900;
+	color:#FFF;
+	text-align:center;
+	height:28px;
+	line-height:28px;
+	width:78px;
+}
+
+.math_list_ques_in
+{
+	background-color:#669900;
+	color:#FFF;
+	text-align:center;
+	height:28px;
+	line-height:28px;
+	width:78px;
+}
+
+.math_list_ques_over
+{
+	border:1px solid #999999;
+	color:#999999;
+	text-align:center;
+	height:28px;
+	line-height:28px;
+	width:78px;
+}
+
+
+/*******************       Math_list End      ******************/

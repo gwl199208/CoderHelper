@@ -1,0 +1,73 @@
+﻿using Coder.Core.Models.Commons;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Coder.Core.Models.OnlineJudges
+{
+    public class TeamResultModel
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        [Key]
+        public int teamResutId { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        [Required]
+        [Column(TypeName = "nvarchar")]
+        [StringLength(10)]
+        public string teamResultStatus { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        [Required]
+        public int teamResultMemory { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        [Required]
+        [Column(TypeName = "datetime")]
+        public DateTime teamResultTime { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        [Required]
+        [Column(TypeName = "nvarchar")]
+        [StringLength(10)]
+        public string teamResultLanguage { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        [Required]
+        [Column(TypeName = "datetime")]
+        [StringLength(200)]
+        public DateTime teamResultSubmitTime { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        [Required]
+        public int teamResultCodeLength { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public virtual TeamContestModel teamContest { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public virtual BaseProblemModel baseProblem { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public virtual TeamModel team { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public virtual UserModel user { get; set; }
+    }
+}

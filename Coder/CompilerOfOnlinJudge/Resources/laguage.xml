@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<laguages>
+  <laguage id="1" name="C" codeClass="Coder.CompilerOfOJ.Common.CodeCompileImp" field="runCodeOfC" />
+  <laguage id="2" name="C++" codeClass="Coder.CompilerOfOJ.Common.CodeCompileImp" field="runCodeOfCPlusPlus" />
+  <laguage id="3" name="C#" codeClass="Coder.CompilerOfOJ.Common.CodeCompileImp" field="runCodeOfCSharp" />
+  <laguage id="3" name="JAVA" codeClass="Coder.CompilerOfOJ.Common.CodeCompileImp" field="runCodeOfJava" />
+</laguages>

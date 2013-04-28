@@ -1,0 +1,156 @@
+/*
+标签属性按照字母升序排列
+*/
+
+
+
+/*******************      Reset Start      ******************/
+div,input,body
+{
+	border:none 0px;
+	margin:0px;
+	padding:0px;
+}
+
+
+/*******************      Reset End      ******************/
+
+/*******************      Login Start      ******************/
+#all
+{
+	overflow:hidden;
+	margin:0 auto 0 auto;
+	width:962px;
+}
+
+#banner_view
+{
+	border-bottom:1px solid #3333ff;
+	height:200px;
+	margin:0 auto 0 auto;
+	width:710px;
+}
+
+
+#login_view
+{
+	height:135px;
+	margin:0 auto 0 auto;
+	overflow:hidden;
+	padding:25px 40px 0 40px;
+	width:630px;
+}
+
+#login_view_left
+{
+	float:left;
+	height:125px;
+	overflow:hidden;
+	padding-top:7px;
+	width:216px;
+}
+
+#login_view_right
+{
+	float:left;
+	height:125px;
+	overflow:hidden;
+	margin-left:142px;
+	width:267px;
+}
+
+#login_view_left div input
+{
+	border:1px solid #000;
+	font-size:12px;
+	height:32px;
+	line-height:32px;
+	margin-bottom:6px;
+	width:212px;
+}
+
+#login_view_left_login_btn
+{
+	background-image:url(../img/login_btn.gif);
+	float:left;
+	font-size:12px;
+	height:29px;
+	line-height:29px;
+	margin-left:14px;
+	overflow:hidden;
+	padding:3px 1px 2px 3px;
+	text-align:center;
+	width:84px;
+}
+
+#login_view_left_register_btn
+{
+	background-image:url(../img/register_btn.gif);
+	float:left;
+	font-size:12px;
+	height:29px;
+	line-height:29px;
+	margin-left:14px;
+	overflow:hidden;
+	padding:3px 1px 2px 3px;
+	text-align:center;
+	width:84px;
+}
+
+#login_view_right div
+{
+	float:left;
+}
+
+#login_view_right_question
+{
+	background-color:#3333ff;
+	color:#FFF;
+	font-family:微软雅黑;
+	font-size:12px;
+	height:73px;
+	line-height:73px;
+	margin:0 6px 6px 0;
+	text-align:center;
+	width:191px;
+}
+
+#login_view_right_code
+{
+	border:1px solid #3333ff;
+	color:#666666;
+	font-family:微软雅黑;
+	font-size:12px;
+	height:71px;
+	line-height:71px;
+	margin-bottom:6px;
+	text-align:center;
+	width:68px;
+}
+
+#login_view_right_math
+{
+	background-color:#ff6600;
+	color:#FFF;
+	font-family:微软雅黑;
+	font-size:12px;
+	height:46px;
+	line-height:46px;
+	margin-right:6px;
+	text-align:center;
+	width:191px;
+}
+
+#login_view_right_problem
+{
+	background-color:#666666;
+	color:#FFF;
+	font-family:微软雅黑;
+	font-size:12px;
+	height:46px;
+	line-height:46px;
+	text-align:center;
+	width:70px;
+}
+
+/*******************      Login End      ******************/

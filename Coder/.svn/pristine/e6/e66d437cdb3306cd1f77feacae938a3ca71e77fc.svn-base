@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Web.Mvc;
+using Autofac;
+using System.Reflection;
+using Autofac.Integration.Mvc;
+using Autofac.Configuration;
+
+namespace Coder.Autofacs
+{
+    /// <summary>
+    /// 将把所有需要注入的controller和service进行注入
+    /// 并且将xml文件中注册的借口实例注入 
+    /// </summary>
+    /// 
+    public static class IoC
+    {
+        private static readonly object LockObj = new object();
+
+        private static ContainerBuilder builder = new ContainerBuilder();
+
+        public static ContainerBuilder Builder
+        {
+            get { return builder; }
+
+            set
+            {
+                lock (LockObj)
+                {
+                    builder = value;
+                }
+            }
+        }
+
+    }
+}

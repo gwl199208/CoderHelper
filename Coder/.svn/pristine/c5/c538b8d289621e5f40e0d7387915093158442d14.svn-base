@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web.Mvc;
+using Autofac;
+using System.Reflection;
+using Autofac.Integration.Mvc;
+using Autofac.Configuration;
+
+namespace Coder.Autofacs
+{
+    public class AutofacRegister
+    {
+        private static IContainer container;
+        public static void RegisterAssemblyByEnd(string end)
+        {
+            var assemblys = AppDomain.CurrentDomain.GetAssemblies().ToList();
+            IoC.Builder.RegisterAssemblyTypes(assemblys.ToArray())
+                .Where(t => t.Name.EndsWith(end)).AsImplementedInterfaces();
+            container = IoC.Builder.Build();
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+        }
+        public static IContainer RegisterSingle<IM, IT>()
+        {
+            IoC.Builder.RegisterType<IM>().As<IT>();
+            return container = IoC.Builder.Build();
+            //DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+        }
+    }
+}
